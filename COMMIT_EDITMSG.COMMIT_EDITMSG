@@ -1,0 +1,22 @@
+index created
+
+# --------------
+# Please enter the commit message for your changes. Everything below
+# this paragraph is ignored, and an empty message aborts the commit.
+# Just close the window to accept your message.
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..087ce82
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,9 @@
++<!DOCTYPE html>
++<html>
++<head>
++	<title>gitTest</title>
++</head>
++<body>
++
++</body>
++</html>
+\ No newline at end of file
