@@ -1,0 +1,20 @@
+name: docker gittest series CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the site in the gittest/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/gittest -v ${{ github.workspace }}/_site:/srv/gittest/_site \
+        gittest/builder:latest /bin/bash -c "chmod 777 /srv/gittest && gittest build --future"
