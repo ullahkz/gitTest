@@ -13,8 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the site in the gittest/builder container
+    - name: Build the site in the gitTest/builder container
       run: |
         docker run \
-        -v ${{ github.workspace }}:/srv/gittest -v ${{ github.workspace }}/_site:/srv/gittest/_site \
-        gittest/builder:latest /bin/bash -c "chmod 777 /srv/gittest && gittest build --future"
+        -v ${{ github.workspace }}:/srv/gitTest -v ${{ github.workspace }}/_site:/srv/gitTest/_site \
+        gitTest/builder:latest /bin/bash -c "chmod 777 /srv/gitTest && gitTest build --future"
